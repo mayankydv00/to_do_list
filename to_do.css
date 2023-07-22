@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(215, 250, 246);
+}
+.container {
+    max-width: 900px;
+    margin: 100px auto;
+
+}
+
+.input_box {
+    margin: 20px 30px;
+    border: 2px solid black;
+    height: 70px;
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+
+input {
+    font-size: 22px;
+}
+
+#work {
+    width: 88%;
+}
+
+button {
+    font-size: 21px;
+
+}
+
+#list {
+    margin: 50px 30px;
+    padding: 2px 3px;
+
+}
+
+.items {
+    border: 2px solid black;
+    padding: 10px 15px;
+    margin-top: 10px;
+    align-content: center;
+
+}
+
+.item_data {
+    font-size: 22px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 85%;
+    background-color: hsl(100, 100%, 50%);
+}
+.checkbox{
+    width: 20px;
+    height: 30px;
+}
