@@ -30,11 +30,8 @@ function filter_fun() {
     dateFrom = new Date(dateFrom).getTime();
     dateTo = new Date(dateTo).getTime();
 
-    filterarr = [];
-    console.log(cat);
-    console.log(dateFrom);
-    console.log(dateTo);
-    console.log(prior);
+    
+    
     for (let i = 0; i < arr.length; i++) {
         let tempDate = new Date(arr[i].date).getTime();
         if (arr[i].category == cat && arr[i].priority == prior && tempDate >= dateFrom && tempDate <= dateTo) {
@@ -70,6 +67,8 @@ function add_work() {
         // clear_items();
         localStorage.setItem("todos", JSON.stringify(arr));
         print_work(arr);
+        filterarr = [];
+        search_arr = [];
 
     }
 }
@@ -209,8 +208,24 @@ function add_subtask() {
 
 }
 
+function deadline(){
+    let temp = [];
+    let date1 = new Date().getTime();
+    for(let i = 0; i < arr.length; i++){
+        let date2 = new Date(arr[i].date).getTime();
+        if(date2 < date1) temp.push(arr[i]);
+    }
+
+    print_work(temp);
+}
+
 function sort_fun() {
-    let temp = arr;
+    let temp =arr;
+    if(filterarr != [] )
+    temp = filterarr;
+    else if (search_arr != [] )
+    temp = search_arr ;
+    
     if (document.getElementById("date_sorting").checked) {
         if (document.getElementById("asend_sorting").checked) {
 
@@ -258,5 +273,33 @@ function sort_fun() {
 
     print_work(temp);
 
+
+}
+let search_arr = [];
+
+function search_fun(){
+    
+
+    let search_text = document.getElementById("search_text").value;
+    
+    for(let i=0;i<arr.length; i++){
+        if(arr[i].text.includes(search_text))
+        search_arr.push(arr[i]);
+        else if(arr[i].category.includes(search_text)){
+            search_arr.push(arr[i]);
+        }
+        else {
+            for(let j=0;j<arr[i].subtask.length;j++){
+                if(arr[i].subtask[j].includes(search_text)){
+                    search_arr.push(arr[i]);
+                    break;
+                }
+            }
+        }
+    }
+
+   
+    print_work(search_arr);
+    
 
 }

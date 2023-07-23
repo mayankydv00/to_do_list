@@ -34,6 +34,7 @@
         </div>
         <div id="flex_container">
             <div class="filter">
+              
                 Filter <br> From <input type="date" id="date_from"> To <input type="date" id="date_to"> <br><input
                     type="text" placeholder="category" id="category_filter">
                 Priority
@@ -60,6 +61,11 @@
 
 
             </div>
+        </div>
+        <div id ="backlog_search_container"> 
+            <button id = "backlog_button" onclick="deadline()" >View Backlogs</button>
+            <input type="text" placeholder="Search" id = "search_text" >
+            <button id = "search_button" onclick ="search_fun()" >Search</button>
         </div>
         <div id="list">
 

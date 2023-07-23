@@ -109,3 +109,15 @@ button {
 .priority_box {
     font-size: 18px;
 }
+#search_text{
+ margin-left: 40%;
+}
+#backlog_button{
+    margin-left: 5%;
+}
+#backlog_search_container{
+    border: 2px solid;
+    width: 90%;
+    margin: 10px  30px;
+    padding: 10px;
+}
