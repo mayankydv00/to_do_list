@@ -67,19 +67,23 @@ function add_work() {
         // clear_items();
         localStorage.setItem("todos", JSON.stringify(arr));
         print_work(arr);
-        filterarr = [];
-        search_arr = [];
+        
 
     }
 }
 
 function clear_items() {
+    filterarr = [];
+    search_arr = [];
     var temp = document.getElementsByClassName("items");
     let n = temp.length;
     for (let i = 0; i < n; i++) {
         temp[0].remove();
     }
 
+}
+function print_work2(){
+    print_work(arr);
 }
 
 function print_work(arr) {
