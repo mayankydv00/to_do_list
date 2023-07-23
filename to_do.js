@@ -188,11 +188,11 @@ function save_fun(pos) {
     const editItem = todos[pos];
     console.log(editItem);
     editItem.childNodes[1].setAttribute("contenteditable", false);
-    editItem.childNodes[2].setAttribute("contenteditable", false);
+    // editItem.childNodes[2].setAttribute("contenteditable", false);
     //console.log(editItem.children[4]);
-    editItem.removeChild(editItem.children[5]);
-    arr[pos].value = editItem.childNodes[1].innerHTML;
-    arr[pos].category = editItem.childNodes[2].innerHTML;
+    editItem.removeChild(editItem.lastChild);
+    arr[pos].text = editItem.childNodes[1].innerHTML;
+    // arr[pos].subtask = editItem.childNodes[2].innerHTML;
 }
 
 function delete_fun(pos) {
