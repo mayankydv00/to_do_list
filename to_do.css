@@ -1,16 +1,22 @@
-body{
+body {
     background-color: rgb(215, 250, 246);
+    font-size: 22px;
 }
+
+h1 {
+    text-align: center;
+}
+
 .container {
-    max-width: 900px;
-    margin: 100px auto;
+    /* max-width: 900px; */
+    /* margin: 100px auto; */
 
 }
 
 .input_box {
     margin: 20px 30px;
     border: 2px solid black;
-    height: 70px;
+    /* height: 140px; */
     padding-top: 30px;
     padding-left: 30px;
 
@@ -21,11 +27,13 @@ input {
 }
 
 #work {
-    width: 88%;
+    width: 60%;
 }
 
 button {
     font-size: 21px;
+    margin-left: 15px;
+    /* border-radius: 5px; */
 
 }
 
@@ -38,19 +46,66 @@ button {
 .items {
     border: 2px solid black;
     padding: 10px 15px;
-    margin-top: 10px;
+    margin-top: 20px;
     align-content: center;
+    display: flex;
+    flex-wrap: wrap;
 
+}
+
+.cat_prior_date {
+    width: 28%;
+    margin: 10px;
+    /* font-size: 50px; */
 }
 
 .item_data {
     font-size: 22px;
     display: inline-block;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 85%;
     background-color: hsl(100, 100%, 50%);
 }
-.checkbox{
+
+.checkbox {
     width: 20px;
     height: 30px;
+}
+
+.subtask_container {
+    margin-left: 40px;
+    /* border: 2px solid; */
+    width: 84%;
+    background-color: hsl(64, 100%, 50%);
+    margin-bottom: 40px;
+}
+
+#flex_container {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.filter {
+    margin: 20px 30px;
+    border: 2px solid black;
+    /* height: 130px; */
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 70%;
+    display: inline-flexbox;
+}
+
+.sorting {
+
+    margin: 20px 30px;
+    border: 2px solid black;
+    /* height: 130px; */
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 30%;
+
+}
+
+.priority_box {
+    font-size: 18px;
 }
